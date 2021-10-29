@@ -1,6 +1,6 @@
 # advance_python_shmonov_m
 flask api for fit ml model
-
+<pre>
 Дополнительно было реализовано
 Валидация обученной модели
 Возвращение списка уже обученных моделей
@@ -43,3 +43,4 @@ name: del_model
 input: model_name(type string) - имя модели
 output: удаление модели
 example: {'del model': 'linear model has deleted'}
+</pre>
