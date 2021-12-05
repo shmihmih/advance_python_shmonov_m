@@ -7,6 +7,10 @@ docker-compose состоит из 4 образов
 3. redis
 4. mongo
 
+Образы опубликованы по ссылке 
+1. https://hub.docker.com/r/shmihmih/flask_api
+2. https://hub.docker.com/r/shmihmih/celery_worker
+
 В проекте реализовано:
 1. работа с БД 
 2. Приложение поддерживает вычисления не в рамках Flask-приложения
