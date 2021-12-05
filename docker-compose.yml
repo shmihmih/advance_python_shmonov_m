@@ -1,0 +1,37 @@
+version: "2"  # optional since v1.27.0
+services:
+  web:
+    build:
+      context: ./flask-app
+      dockerfile: Dockerfile
+#    restart: always
+    ports:
+      - "5000:5000"
+
+    depends_on:
+      - redis
+
+  celery:
+    build:
+      context: ./worker
+      dockerfile: Dockerfile
+#    restart: always
+    depends_on:
+      - redis
+      - mongodb
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+  mongodb:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+
+#redis
+#docker run --name mongodb -d -p 27017:27017 mongo
+#docker run -d --name redis-test-2 -p 6379:6379  -v /redis/redis.conf:/redis.conf redis redis-server /redis.conf --appendonly yes --requirepass "redis"

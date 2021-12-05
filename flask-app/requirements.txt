@@ -1,0 +1,6 @@
+flask == 2.0.2
+scikit-learn == 0.24.2
+redis == 4.0.2
+pymongo == 4.0
+celery == 5.1.2
+
